@@ -90,3 +90,29 @@ Ok!! That worked!
  
    Nx read the output from the cache instead of running the command for 5 out of 7 tasks.
 ```
+
+Very nice! Now let's try tweaking the nx.json configs..
+
+I was thinking how nx knows that my dist folder is the output folder. I think it's because of the `main` and `module` fields in the package.json. Let's try removing them and see what happens.
+
+TODO!!!!!!
+
+But that can be controlled by the `outputs` field in the `nx.json` file. Let's try that.
+
+
+```diff
+{
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"],
++      "outputs": [
++        "{workspaceRoot}/{projectRoot}/dist/*"
++      ]
+    },
+    "test": {
+      "inputs": ["tests"],
+      "dependsOn": ["^build"]
+    }
+  }
+}
+```
