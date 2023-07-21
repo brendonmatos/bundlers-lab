@@ -1,0 +1,8 @@
+{
+  "name":  "@bundlers/math",
+  "scripts": {
+    "build": "npx esbuild ./src/index.ts --bundle --format=cjs --outfile=dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts"
+}

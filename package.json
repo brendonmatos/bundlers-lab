@@ -1,0 +1,28 @@
+{
+  "name": "bundlers-lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-repo": "nx run-many --target=build --all",
+    "test-repo": "nx run-many --target=test --all"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nx": "16.5.3",
+    "nx-cloud": "latest",
+    "vite": "^4.4.5",
+    "vitest": "^0.33.0"
+  },
+  "nx": {
+    "targets": {}
+  },
+  "dependencies": {
+    "unbuild": "^1.2.1"
+  }
+}
