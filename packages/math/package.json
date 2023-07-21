@@ -1,11 +1,11 @@
 {
   "name":  "@bundlers/math",
   "scripts": {
-    "build:esm": "npx esbuild ./src/index.ts --bundle --format=esm --outfile=dist/index.js",
+    "build:esm": "npx esbuild ./src/index.ts --bundle --format=esm --outfile=dist/index.mjs",
     "build:cjs": "npx esbuild ./src/index.ts --bundle --format=cjs --outfile=dist/index.js",
     "build:iife": "npx esbuild ./src/index.ts --bundle --format=iife --outfile=dist/index.js",
     "build": "npm run build:esm"
   },
-  "main": "./dist/index.js",
+  "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts"
 }

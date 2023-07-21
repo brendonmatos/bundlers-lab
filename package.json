@@ -8,7 +8,8 @@
     "test-repo": "nx run-many --target=test --all"
   },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "keywords": [],
   "author": "",

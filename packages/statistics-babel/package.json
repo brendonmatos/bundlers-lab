@@ -1,12 +1,18 @@
 {
-  "name":  "@bundlers/statistics-babel",
+  "name": "@bundlers/statistics-babel",
   "scripts": {
-    "build": "npx esbuild ./src/index.ts --bundle --outfile=dist/index.js",
+    "build": "npx babel --extensions .ts,.tsx ./src -d ./dist --presets=@babel/preset-typescript",
     "test": "vitest run"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "dependencies": {
     "@bundlers/math": "*"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.9",
+    "@babel/core": "^7.22.9",
+    "@babel/node": "^7.22.6",
+    "@babel/preset-typescript": "^7.22.5"
   }
 }
