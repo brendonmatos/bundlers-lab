@@ -12,26 +12,24 @@
       "dependencies": "*",
       "devDependencies": "*"
     },
-    "tsconfig.base.json": "*",
+    "tsconfig.json": "*",
     "nx.json": "*"
   },
   "namedInputs": {
     "default": ["{projectRoot}/**/*"],
-    "production": ["!{projectRoot}/**/*.spec.tsx"]
+    "tests": ["{projectRoot}/**/*.test.*"]
   },
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "targetDefaults": {
     "build": {
-      "inputs": ["production", "^production"],
       "dependsOn": ["^build"]
     },
     "test": {
-      "dependsOn": ["build"]
+      "inputs": ["tests"],
+      "dependsOn": ["^build"]
     }
   },
   "generators": {
-    "@nx/js:library": {
-      "buildable": true
-    }
   },
   "tasksRunnerOptions": {
     "default": {

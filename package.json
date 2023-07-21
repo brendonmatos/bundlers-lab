@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build-repo": "nx run-many --target=build --all",
-    "test-repo": "nx run-many --target=test --all"
+    "test-repo": "nx run-many --target=test --all",
+    "burst-cache": "nx reset"
   },
   "workspaces": [
     "packages/*",
