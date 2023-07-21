@@ -1,5 +1,5 @@
 {
-  "name":  "@bundlers/physics",
+  "name":  "@bundlers/physics-esbuild",
   "scripts": {
     "build": "npx esbuild ./src/index.ts --bundle --outfile=dist/index.js",
     "test": "vitest run"

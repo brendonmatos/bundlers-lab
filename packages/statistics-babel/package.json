@@ -1,0 +1,12 @@
+{
+  "name":  "@bundlers/statistics-babel",
+  "scripts": {
+    "build": "npx esbuild ./src/index.ts --bundle --outfile=dist/index.js",
+    "test": "vitest run"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "@bundlers/math": "*"
+  }
+}
