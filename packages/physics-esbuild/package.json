@@ -1,7 +1,7 @@
 {
   "name":  "@bundlers/physics-esbuild",
   "scripts": {
-    "build": "npx esbuild ./src/index.ts --external:@bundlers/math --bundle --outfile=./dist/index.js",
+    "build": "npx esbuild ./src/index.ts --format=cjs --external:@bundlers/math --bundle --outfile=./dist/index.js",
     "test": "vitest run"
   },
   "main": "./dist/index.js",

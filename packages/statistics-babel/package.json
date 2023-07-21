@@ -1,7 +1,7 @@
 {
   "name": "@bundlers/statistics-babel",
   "scripts": {
-    "build": "npx babel --extensions .ts,.tsx ./src -d ./dist --presets=@babel/preset-typescript",
+    "build": "npx babel --extensions .ts,.tsx ./src -d ./dist --presets=@babel/preset-typescript,@babel/preset-env",
     "test": "vitest run"
   },
   "main": "./dist/index.js",
@@ -13,6 +13,7 @@
     "@babel/cli": "^7.22.9",
     "@babel/core": "^7.22.9",
     "@babel/node": "^7.22.6",
+    "@babel/preset-env": "^7.22.9",
     "@babel/preset-typescript": "^7.22.5"
   }
 }
