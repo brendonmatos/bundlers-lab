@@ -22,14 +22,12 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "targetDefaults": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": [
-        "{workspaceRoot}/{projectRoot}/dist/*"
-      ]
+      "inputs": ["default"],
+      "dependsOn": ["^build"]
     },
     "test": {
       "inputs": ["tests"],
-      "dependsOn": ["^build"]
+      "dependsOn": ["build"]
     }
   },
   "generators": {
