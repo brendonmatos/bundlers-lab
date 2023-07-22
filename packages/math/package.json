@@ -4,7 +4,8 @@
     "build:esm": "npx esbuild ./src/index.ts --bundle --format=esm --outfile=dist/index.mjs",
     "build:cjs": "npx esbuild ./src/index.ts --bundle --format=cjs --outfile=dist/index.cjs",
     "build:iife": "npx esbuild ./src/index.ts --bundle --format=iife --outfile=dist/index.js",
-    "build": "npm run build:esm && npm run build:cjs"
+    "build": "npm run build:esm && npm run build:cjs",
+    "test": "vitest run"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
