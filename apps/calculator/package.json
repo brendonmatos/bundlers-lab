@@ -1,7 +1,7 @@
 {
   "name":  "@bundlers/calculator",
   "scripts": {
-    "build": "npx esbuild ./src/index.ts --external:@bundlers/math --bundle --outfile=./dist/index.js",
+    "build": "npx esbuild ./src/index.ts --external:@bundlers/math --bundle --outfile=./dist/index.js --format=esm",
     "test": "vitest run"
   },
   "main": "./dist/index.js",
